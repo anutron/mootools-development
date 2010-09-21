@@ -4,7 +4,10 @@ lib/color
 lib/core
 lib/depender
 lib/more
+lib/slick
 lib/table
 lib/test-runner
 lib/touch
 lib/widgets
+lib/behavior
+lib/more-behaviors
