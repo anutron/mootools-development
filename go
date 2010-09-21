@@ -12,8 +12,9 @@ case $option in
         cd test-runner;
         cp ../../runner_settings.py ./settings.py;
         virtualenv env;
-        cd ../depender/django ../../test-runner/env/bin/python setup.py develop
-        cd ../../test-runner
+        cd ../depender/django;
+        ../../test-runner/env/bin/python setup.py develop;
+        cd ../../test-runner;
         env/bin/python setup.py develop;;
     [d]* )
         cd lib/test-runner;
