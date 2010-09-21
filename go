@@ -1,0 +1,27 @@
+#! /bin/bash
+if [ $# -lt 1 ]; then
+  echo "Choose an option: (i) install, (d) js dependency check, (r) run server on port 9876, (s) sync libraries"
+  read option
+else
+  option=$1
+fi
+case $option in
+    [i]* ) 
+        cd lib
+        crepo sync
+        cd test-runner;
+        cp ../../runner_settings.py ./settings.py;
+        virtualenv env;
+        cd ../depender/django ../../test-runner/env/bin/python setup.py develop
+        cd ../../test-runner
+        env/bin/python setup.py develop;;
+    [d]* )
+        cd lib/test-runner;
+        env/bin/python manage.py depender_check;;
+    [r]* )
+        cd lib/test-runner;
+        env/bin/python manage.py runserver_plus 0.0.0.0:9876;;
+    [s]* )
+        crepo sync;;
+    * ) echo "Please choose from i, d, r, or s.";;
+esac
