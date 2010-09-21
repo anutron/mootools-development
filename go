@@ -1,6 +1,6 @@
 #! /bin/bash
 if [ $# -lt 1 ]; then
-  echo "Choose an option: (i) install, (d) js dependency check, (r) run server on port 9876, (s) sync libraries"
+  echo "Choose an option: (i)nstall, (d)ependency check, (r)un server on port 9876, (s)ync libraries"
   read option
 else
   option=$1
