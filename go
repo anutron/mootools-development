@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 if [ $# -lt 1 ]; then
   echo "Choose an option: (i)nstall, (d)ependency check, (r)un server on port 9876, (s)ync libraries"
   read option
