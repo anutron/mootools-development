@@ -23,6 +23,7 @@ case $option in
         cd lib/test-runner;
         env/bin/python manage.py runserver_plus 0.0.0.0:9876;;
     [s]* )
+        cd lib;
         crepo sync;;
     * ) echo "Please choose from i, d, r, or s.";;
 esac
