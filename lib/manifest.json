@@ -15,7 +15,9 @@
 		},
 		"mootools-more": {
 			"dir":"more",
-			"track-branch": "develop-edge"
+			"track-branch": "develop-edge",
+			"from-remote": "anutron",
+			"remotes": ["anutron"]
 		},
 		"art": {
 			"dir":"art",
