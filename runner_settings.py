@@ -53,12 +53,6 @@ DEPENDER_PACKAGE_YMLS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "art", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "touch", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "color", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "table", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "widgets", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "slick", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
 )
 DEPENDER_SCRIPTS_JSON = []
@@ -71,11 +65,12 @@ MOOTOOLS_TEST_LOCATIONS = {
 #these are typically in the Tests directory of the repository
 #example: ../more/Tests
 
-  "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
   "more-behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
-  "widgets": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "widgets", "Tests")),
   "behavior": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Tests")),
+  "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
 }
+
+EXCLUDED_TESTS = ["more"]
 
 MAKO_TEMPLATE_DIRS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "test_runner", "templates")),

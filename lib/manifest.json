@@ -1,5 +1,5 @@
 {
-	"default-remote":"mootools", 
+	"default-remote":"anutron",
 	"remotes": {
 		"anutron": {
 			"fetch": "git://github.com/anutron/%(name)s.git"
@@ -11,71 +11,27 @@
 	"projects": {
 		"mootools-core": { 
 			"dir":"core",
-			"track-indirect": "core.hash"
+			"track-indirect": "core.hash",
+			"from-remote": "mootools",
+			"remotes": ["mootools"]
 		},
 		"mootools-more": {
 			"dir":"more",
-			"track-branch": "develop-edge",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-		"art": {
-			"dir":"art",
-			"track-indirect": "art.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
+			"track-indirect": "more.hash"
 		},
 		"mootools-depender": {
 			"dir":"depender",
-			"track-branch": "master",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
+			"track-branch": "master"
 		},
 		"mootools-test-runner": {
 			"dir":"test-runner",
-			"track-branch": "master",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-		"mootools-color": {
-			"dir":"color",
-			"track-indirect": "color.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-		"mootools-touch": {
-			"dir":"touch",
-			"track-indirect": "touch.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-		"mootools-table": {
-			"dir":"table",
-			"track-indirect": "table.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-		"art-widgets": {
-			"dir":"widgets",
-			"track-branch": "master",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
+			"track-branch": "master"
 		},
 		"behavior": {
-			"dir":"behavior",
-			"track-branch": "master",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
+			"track-branch": "master"
 		},
 		"more-behaviors": {
-			"track-branch": "master",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
-		},
-		"slick": {
-			"track-indirect": "slick.hash",
-			"from-remote": "anutron",
-			"remotes": ["anutron"]
+			"track-branch": "master"
 		}
 	}
 }
