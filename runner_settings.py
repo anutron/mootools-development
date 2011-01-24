@@ -65,7 +65,7 @@ MOOTOOLS_TEST_LOCATIONS = {
 #these are typically in the Tests directory of the repository
 #example: ../more/Tests
 
-  "more-behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
+  "morebehaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
   "behavior": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Tests")),
   "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
 }
