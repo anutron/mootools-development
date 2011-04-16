@@ -17,8 +17,6 @@
 		},
 		"mootools-more": {
 			"dir":"more",
-			"from-remote": "mootools",
-			"remotes":["mootools"],
 			"track-indirect": "more.hash"
 		},
 		"mootools-depender": {

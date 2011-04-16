@@ -4,3 +4,6 @@ lib/more
 lib/test-runner
 lib/behavior
 lib/more-behaviors
+lib/clientcide
+lib/cloudera-ui
+lib/mootools-runner

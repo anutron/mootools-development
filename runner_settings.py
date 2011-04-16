@@ -51,8 +51,13 @@ DEPENDER_PACKAGE_YMLS = (
 #for example, ../core/package.yml for core
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Specs", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
 )
 DEPENDER_SCRIPTS_JSON = []
@@ -64,10 +69,26 @@ MOOTOOLS_TEST_LOCATIONS = {
 #locations of html tests that should be included in the menu
 #these are typically in the Tests directory of the repository
 #example: ../more/Tests
-
+  "clientcide": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Tests")),
   "morebehaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
   "behavior": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Tests")),
   "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
+}
+
+MOOTOOLS_SPECS_AND_BENCHMARKS = ['More-Tests','Behavior-Tests','More-Behaviors-Tests','Clientcide-Tests']
+
+MOOTOOLS_RUNNER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "mootools-runner"))
+
+GENERIC_ASSETS = {
+  'Assets.js.test.js': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "Assets.js.test.js")),
+  'Assets.css.test.css': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "Assets.css.test.css")),
+  'mootools.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "mootools.png")),
+  'cow.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "cow.png")),
+  'notExisting.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "notExisting.png")),
+  'iDontExist.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "iDontExist.png")),
+  'iDontExistEither.png': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "iDontExistEither.png")),
+  'jsonp.js': os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "more", "Specs", "assets", "jsonp.js")),
+  
 }
 
 EXCLUDED_TESTS = ["more"]
