@@ -9,8 +9,10 @@ case $option in
     [i]* ) 
         cd lib
         crepo sync
+        cd mootools-runner;
+        git submodule update --init;
         cd test-runner;
-        cp ../../runner_settings.py ./settings.py;
+        ln -s ../../runner_settings.py ./settings.py;
         virtualenv env;
         cd ../depender/django;
         ../../test-runner/env/bin/python setup.py develop;
