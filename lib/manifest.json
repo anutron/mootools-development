@@ -32,6 +32,9 @@
 		},
 		"more-behaviors": {
 			"track-branch": "master"
+		},
+		"core-specs": {
+			"track-branch": "working"
 		}
 	}
 }

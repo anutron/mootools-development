@@ -50,6 +50,8 @@ DEPENDER_PACKAGE_YMLS = (
 #in this example, they're all located in the directory above the test runner
 #for example, ../core/package.yml for core
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core-specs", "1.3base", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core-specs", "1.3client", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
@@ -75,7 +77,7 @@ MOOTOOLS_TEST_LOCATIONS = {
   "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
 }
 
-MOOTOOLS_SPECS_AND_BENCHMARKS = ['More-Tests','Behavior-Tests','More-Behaviors-Tests','Clientcide-Tests']
+MOOTOOLS_SPECS_AND_BENCHMARKS = ['Core-Specs-1.3client', 'Core-Specs-1.3base', 'More-Tests', 'Clientcide-Tests', 'Behavior-Tests', 'More-Behaviors-Tests']
 
 MOOTOOLS_RUNNER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "mootools-runner"))
 
