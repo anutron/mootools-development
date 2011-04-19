@@ -58,6 +58,8 @@ DEPENDER_PACKAGE_YMLS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Specs", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "cloudera-ui", "package.yml")),
+  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "cloudera-ui", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
@@ -77,7 +79,7 @@ MOOTOOLS_TEST_LOCATIONS = {
   "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
 }
 
-MOOTOOLS_SPECS_AND_BENCHMARKS = ['Core-Specs-1.3client', 'Core-Specs-1.3base', 'More-Tests', 'Clientcide-Tests', 'Behavior-Tests', 'More-Behaviors-Tests']
+MOOTOOLS_SPECS_AND_BENCHMARKS = ['Core-Specs-1.3client', 'Core-Specs-1.3base', 'More-Tests', 'Clientcide-Tests', 'Behavior-Tests', 'More-Behaviors-Tests', 'Cloudera-UI-Tests']
 
 MOOTOOLS_RUNNER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "mootools-runner"))
 
