@@ -1,7 +1,7 @@
 MooTools Development Environment
 --------------------------------
 
-This repo contains a set of hashes designed to allow you to get a MooTools development sandbox up and running quickly. It has a few dependencies listed below, but after you have those sorted it should be easy to get things running.
+This repo contains a set of hashes designed to allow you to get a MooTools development sandbox up and running quickly. It uses a python virtual environment to install itself; it does not modify your system in any way outside the repository in which you install it.
 
 Requirements:
 * [python](http://www.python.org/)
