@@ -16,7 +16,7 @@ case $option in
         ../env/bin/crepo sync;
         cd mootools-runner;
         git submodule update --init;
-        cd test-runner;
+        cd ../test-runner;
         ln -s ../../runner_settings.py ./settings.py;
         cd ../depender/django;
         ../../../env/bin/python setup.py develop;
