@@ -7,25 +7,29 @@ else
 fi
 case $option in
     [i]* ) 
-        cd lib
-        crepo sync
+        curl -O https://github.com/pypa/virtualenv/raw/master/virtualenv.py;
+        python virtualenv.py env;
+        rm virtualenv.*;
+        rm setuptools*;
+        env/bin/easy_install crepo;
+        cd lib;
+        ../env/bin/crepo sync;
         cd mootools-runner;
         git submodule update --init;
         cd test-runner;
         ln -s ../../runner_settings.py ./settings.py;
-        virtualenv env;
         cd ../depender/django;
-        ../../test-runner/env/bin/python setup.py develop;
+        ../../../env/bin/python setup.py develop;
         cd ../../test-runner;
-        env/bin/python setup.py develop;;
+        ../../env/bin/python setup.py develop;;
     [d]* )
         cd lib/test-runner;
-        env/bin/python manage.py depender_check;;
+        ../../env/bin/python manage.py depender_check;;
     [r]* )
         cd lib/test-runner;
-        env/bin/python manage.py runserver_plus 0.0.0.0:9876;;
+        ../../env/bin/python manage.py runserver_plus 0.0.0.0:9876;;
     [s]* )
         cd lib;
-        crepo sync;;
+        ../env/bin/crepo sync;;
     * ) echo "Please choose from i, d, r, or s.";;
 esac
