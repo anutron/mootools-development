@@ -1,19 +1,14 @@
 {
-	"default-remote":"anutron",
+	"default-remote":"cloudera",
 	"remotes": {
-		"anutron": {
-			"fetch": "git://github.com/anutron/%(name)s.git"
-		},
-		"mootools": {
-			"fetch": "git://github.com/mootools/%(name)s.git"
+		"cloudera": {
+			"fetch": "git://github.com/cloudera/%(name)s.git"
 		}
 	},
 	"projects": {
 		"mootools-core": { 
 			"dir":"core",
-			"track-indirect": "core.hash",
-			"from-remote": "mootools",
-			"remotes": ["mootools"]
+			"track-indirect": "core.hash"
 		},
 		"mootools-more": {
 			"dir":"more",
@@ -44,7 +39,7 @@
 		},
 		"mootools-core-specs": {
 			"dir":"core-specs",
-			"track-branch": "working"
+			"track-branch": "master"
 		}
 	}
 }
