@@ -39,7 +39,8 @@
 		"cloudera-ui": {
 			"track-branch": "master"
 		},
-		"core-specs": {
+		"mootools-core-specs": {
+			"dir":"core-specs",
 			"track-branch": "working"
 		}
 	}
