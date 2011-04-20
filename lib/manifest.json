@@ -33,6 +33,9 @@
 		"more-behaviors": {
 			"track-branch": "master"
 		},
+		"clientcide": {
+			"track-branch": "master"
+		},
 		"cloudera-ui": {
 			"track-branch": "master"
 		},
