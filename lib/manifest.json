@@ -1,8 +1,8 @@
 {
-	"default-remote":"cloudera",
+	"default-remote":"anutron",
 	"remotes": {
-		"cloudera": {
-			"fetch": "git://github.com/cloudera/%(name)s.git"
+		"anutron": {
+			"fetch": "git://github.com/anutron/%(name)s.git"
 		}
 	},
 	"projects": {
@@ -19,7 +19,7 @@
 			"track-branch": "master"
 		},
 		"mootools-test-runner": {
-			"dir":"test-runner",
+			"dir":"dev-app",
 			"track-branch": "master"
 		},
 		"behavior": {
@@ -29,9 +29,6 @@
 			"track-branch": "master"
 		},
 		"clientcide": {
-			"track-branch": "master"
-		},
-		"cloudera-ui": {
 			"track-branch": "master"
 		},
 		"mootools-runner": {
