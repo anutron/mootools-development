@@ -30,7 +30,7 @@ case $option in
         ../../env/bin/python manage.py runserver_plus 0.0.0.0:9876;;
     [l]* )
         cd lib/dev-app;
-        ../../env/bin/python manage.py runserver_plus 0.0.0.0:80;;
+        ../../env/bin/python manage.py runserver 0.0.0.0:80;;
     [s]* )
         cd lib;
         ../env/bin/crepo sync;;
