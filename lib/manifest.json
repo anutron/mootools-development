@@ -22,15 +22,6 @@
 			"dir":"dev-app",
 			"track-branch": "master"
 		},
-		"behavior": {
-			"track-branch": "master"
-		},
-		"more-behaviors": {
-			"track-branch": "master"
-		},
-		"clientcide": {
-			"track-branch": "master"
-		},
 		"mootools-runner": {
 			"track-branch": "master"
 		},

@@ -54,12 +54,6 @@ DEPENDER_PACKAGE_YMLS = (
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core-specs", "1.3client", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Specs", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "package.yml")),
-  os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Specs", "package.yml")),
   os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "depender", "client", "package.yml")),
 )
 DEPENDER_SCRIPTS_JSON = []
@@ -71,13 +65,11 @@ MOOTOOLS_TEST_LOCATIONS = {
 #locations of html tests that should be included in the menu
 #these are typically in the Tests directory of the repository
 #example: ../more/Tests
-  "clientcide": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Tests")),
-  "more-behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Tests")),
   "more": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Tests")),
 }
 EXCLUDED_TESTS = [""]
 
-MOOTOOLS_SPECS_AND_BENCHMARKS = ['Core-Specs-1.3client', 'Core-Specs-1.3base', 'More-Tests', 'Clientcide-Tests', 'Behavior-Tests', 'More-Behaviors-Tests']
+MOOTOOLS_SPECS_AND_BENCHMARKS = ['Core-Specs-1.3client', 'Core-Specs-1.3base', 'More-Tests']
 
 MOOTOOLS_RUNNER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../", "mootools-runner"))
 
@@ -99,11 +91,8 @@ MAKO_TEMPLATE_DIRS = (
 
 DOC_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DOCS = {
-  "Behavior": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "behavior", "Docs")),
-  "More Behaviors": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more-behaviors", "Docs")),
   "More": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "more", "Docs")),
   "Core": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "core", "Docs")),
-  "Clientcide": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "clientcide", "Docs")),
 }
 
-TITLE_PREFIX = 'MooTools Frontend'
+TITLE_PREFIX = 'MooTools Core'
