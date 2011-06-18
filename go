@@ -7,7 +7,7 @@ else
 fi
 case $option in
     [i]* ) 
-        curl -O https://raw.github.com/pypa/virtualenv/master/virtualenv.py;
+        curl -O -k https://raw.github.com/pypa/virtualenv/master/virtualenv.py;
         python virtualenv.py env;
         rm virtualenv.*;
         rm setuptools*;
