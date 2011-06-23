@@ -9,8 +9,6 @@ case $option in
     [i]* ) 
         curl -O -k https://raw.github.com/pypa/virtualenv/master/virtualenv.py;
         python virtualenv.py env;
-        rm virtualenv.*;
-        rm setuptools*;
         env/bin/easy_install crepo;
         cd lib;
         ../env/bin/crepo sync;
@@ -21,7 +19,10 @@ case $option in
         cd ../depender/django;
         ../../../env/bin/python setup.py develop;
         cd ../../dev-app;
-        ../../env/bin/python setup.py develop;;
+        ../../env/bin/python setup.py develop;
+        cd ../../;
+        rm setuptools*;
+        rm virtualenv.*;;
     [d]* )
         cd lib/dev-app;
         ../../env/bin/python manage.py depender_check;;
