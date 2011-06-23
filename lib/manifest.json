@@ -16,11 +16,11 @@
 		},
 		"mootools-depender": {
 			"dir":"depender",
-			"track-branch": "master"
+			"track-branch": "arian"
 		},
 		"mootools-test-runner": {
 			"dir":"dev-app",
-			"track-branch": "master"
+			"track-branch": "arian"
 		},
 		"mootools-runner": {
 			"track-branch": "master"
