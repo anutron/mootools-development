@@ -25,3 +25,4 @@ After you run `./install`, execute `./go` you'll get a menu prompting you for ac
 * depender - checks js dependencies; aka `./go d`
 * sync - synchronizes external libraries; aka `./go s`
 * run - runs the server on port 9876; aka `./go r`
+* live - runs the server on port 80; NOT in DEBUG mode, so it's faster because it caches the JS; aka `./go l`
