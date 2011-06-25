@@ -2,7 +2,7 @@ import logging
 from os.path import abspath, join, dirname
 DOC_ROOT = dirname(__file__)
 
-TITLE_PREFIX = 'Clientcide Development'
+TITLE_PREFIX = 'MooTools Development'
 
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
