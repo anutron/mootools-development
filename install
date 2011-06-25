@@ -1,0 +1,10 @@
+#!/bin/bash
+curl -O -k https://raw.github.com/pypa/virtualenv/master/virtualenv.py;
+python virtualenv.py env;
+env/bin/easy_install crepo;
+rm virtualenv.*;
+ln -s lib/go/go;
+cd lib;
+../env/bin/crepo sync;
+cd ..;
+./go install;

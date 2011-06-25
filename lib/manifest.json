@@ -6,6 +6,10 @@
 		}
 	},
 	"projects": {
+		"mootools-development-scripts": {
+			"dir":"go",
+			"track-branch":"master"
+		},
 		"mootools-core": { 
 			"dir":"core",
 			"track-indirect": "core.hash"
