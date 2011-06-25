@@ -19,9 +19,9 @@ PROJECTS = {
   },
   "More": {
     "package": "../more/package.yml",
-    "specs": ["../more/Specs/package.yml"],
+    "specs": ["../more/Tests/Specs/package.yml"],
     "demos": {
-      "path": "../more/Tests",
+      "path": "../more/Tests/Interactive",
       "exclude": True
     },
     "docs": "../more/Docs",
@@ -30,14 +30,14 @@ PROJECTS = {
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(DOC_ROOT, "../more/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(DOC_ROOT, "../more/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(DOC_ROOT, "../more/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(DOC_ROOT, "../more/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(DOC_ROOT, "../more/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(DOC_ROOT, "../more/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(DOC_ROOT, "../more/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(DOC_ROOT, "../more/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/jsonp.js")),
 }
 
 # which buttons are visible at the top of the app? Comment out any you choose.
