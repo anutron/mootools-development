@@ -22,7 +22,7 @@ PROJECTS = {
     "specs": ["../more/Tests/Specs/package.yml"],
     "demos": {
       "path": "../more/Tests/Interactive",
-      "exclude": True
+      "exclude": False
     },
     "docs": "../more/Docs",
     "build": True
