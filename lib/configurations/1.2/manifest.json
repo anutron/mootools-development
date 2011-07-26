@@ -6,10 +6,6 @@
 		}
 	},
 	"projects": {
-		"mootools-development-scripts": {
-			"dir":"go",
-			"track-branch":"master"
-		},
 		"mootools-core": { 
 			"dir":"core",
 			"track-indirect": "core.hash"
@@ -17,17 +13,6 @@
 		"mootools-more": {
 			"dir":"more",
 			"track-indirect": "more.hash"
-		},
-		"mootools-depender": {
-			"dir":"depender",
-			"track-branch": "master"
-		},
-		"mootools-test-runner": {
-			"dir":"dev-app",
-			"track-branch": "master"
-		},
-		"mootools-runner": {
-			"track-branch": "master"
 		},
 		"mootools-core-specs": {
 			"dir":"core-specs",

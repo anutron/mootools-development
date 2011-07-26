@@ -7,47 +7,63 @@ TITLE_PREFIX = 'MooTools Development'
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
+DEFAULT_VERSION = "1.3"
+
 PROJECTS = {
-  "Core": {
-    "package": "../core/package.yml",
-    "specs": [
-      "../core-specs/1.3base/package.yml",
-      "../core-specs/1.3client/package.yml"
-    ],
-    "docs": "../core/Docs",
-    "build": True
-  },
-  "More": {
-    "package": "../more/package.yml",
-    "specs": ["../more/Tests/Specs/package.yml"],
-    "demos": {
-      "path": "../more/Tests/Interactive",
-      "exclude": False
+  "1.2": {
+    "Core": {
+      "package": "../../configurations/1.2/core/package.yml",
+      "docs": "../../configurations/1.2/core/Docs",
+      "build": True
     },
-    "docs": "../more/Docs",
-    "build": True
+    "More": {
+      "package": "../../configurations/1.2/more/package.yml",
+      "demos": {
+        "path": "../../configurations/1.2/more/Tests/Interactive",
+        "exclude": False
+      },
+      "docs": "../../configurations/1.2/more/Docs",
+      "build": True
+    }
+  },
+  "1.3": {
+    "Core": {
+      "package": "../../configurations/1.3/core/package.yml",
+      "specs": [
+        "../../configurations/1.3/core-specs/1.3base/package.yml",
+        "../../configurations/1.3/core-specs/1.3client/package.yml"
+      ],
+      "docs": "../../configurations/1.3/core/Docs",
+      "build": True,
+      "fiddles": {
+        "path": "../../configurations/1.3/fiddles/demos",
+        "exclude": False,
+        "package": "../../configurations/1.3/fiddles/package.yml"
+      }
+    },
+    "More": {
+      "package": "../../configurations/1.3/more/package.yml",
+      "specs": ["../../configurations/1.3/more/Tests/Specs/package.yml"],
+      "demos": {
+        "path": "../../configurations/1.3/more/Tests/Interactive",
+        "exclude": False
+      },
+      "docs": "../../configurations/1.3/more/Docs",
+      "build": True
+    }
   }
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(DOC_ROOT, "../more/Tests/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/jsonp.js")),
 }
-
-# which buttons are visible at the top of the app? Comment out any you choose.
-BUTTONS = [
-  'Docs',
-  'Demos',
-  'Specs',
-  # 'Benchmarks',
-  'Builder'
-]
 
 #############################################################################
 ###                  DO NOT EDIT BELOW THIS LINE                          ###
@@ -106,21 +122,27 @@ MAKO_TEMPLATE_DIRS = (
   abspath(join(DOC_ROOT, "../depender/django/src/depender/templates")),
 )
 
-DEPENDER_PACKAGE_YMLS = []
-DEPENDER_SCRIPTS_JSON = []
-BUILDER_PACKAGES = []
+DEPENDER_CONFIGURATIONS = {}
 
 for name, project in PROJECTS.iteritems():
-  if project.has_key("package"):
-    DEPENDER_PACKAGE_YMLS.append(project['package'])
-  if project.has_key('scripts_json'):
-    DEPENDER_SCRIPTS_JSON.append(project['scripts_json'])
-  if project.has_key("specs"):
-    for spec in project["specs"]:
-      DEPENDER_PACKAGE_YMLS.append(spec)
-  if project.has_key("build") and project["build"] is True:
-    BUILDER_PACKAGES.append(name)
-
+  config = DEPENDER_CONFIGURATIONS[name] = {}
+  config['DEPENDER_PACKAGE_YMLS'] = []
+  config['DEPENDER_SCRIPTS_JSON'] = []
+  config['BUILDER_PACKAGES'] = []
+  if project.has_key('exclude_blocks') is False:
+    config['exclude_blocks'] = []
+  for name, repo in project.iteritems():
+    if repo.has_key('package'):
+      config['DEPENDER_PACKAGE_YMLS'].append(repo['package'])
+    if repo.has_key('scripts_json'):
+      config['DEPENDER_SCRIPTS_JSON'].append(repo['scripts_json'])
+    if repo.has_key('specs'):
+      for spec in repo["specs"]:
+        config['DEPENDER_PACKAGE_YMLS'].append(spec)
+    if repo.has_key('build') and repo["build"] is True:
+      config['BUILDER_PACKAGES'].append(name)
+    if repo.has_key('fiddles'):
+      config['DEPENDER_PACKAGE_YMLS'].append(repo['fiddles']['package'])
 
 def GET_PATH(path):
   return abspath(join(DOC_ROOT, path))

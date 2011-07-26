@@ -1,0 +1,22 @@
+{
+	"default-remote":"anutron",
+	"remotes": {
+		"anutron": {
+			"fetch": "git://github.com/anutron/%(name)s.git"
+		}
+	},
+	"projects": {
+		"mootools-core": { 
+			"dir":"core",
+			"track-indirect": "core.hash"
+		},
+		"mootools-more": {
+			"dir":"more",
+			"track-indirect": "more.hash"
+		},
+		"mootools-core-specs": {
+			"dir":"core-specs",
+			"track-branch": "master"
+		}
+	}
+}
