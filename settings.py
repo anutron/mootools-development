@@ -8,48 +8,55 @@ TITLE_PREFIX = 'MooTools Development'
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
-DEFAULT_VERSION = "1.3"
+DEFAULT_VERSION = "Clientcide 3.0.5"
 
 PROJECTS = {
-  "1.2": {
+  "Clientcide 2.2.1": {
+    "clientcide": {
+      "package": "lib/clientcide.2.2.1/package.yml",
+      "docs": "lib/clientcide.2.2.1/Docs",
+      "build": True
+    },
     "Core": {
       "package": "lib/core.1.2.5/package.yml",
-      "docs": "lib/core.1.2.5/Docs",
       "build": True
     },
     "More": {
       "package": "lib/more.1.2.5.1/package.yml",
-      "demos": {
-        "path": "lib/more.1.2.5.1/Tests/Interactive",
-        "exclude": False
-      },
-      "docs": "lib/more.1.2.5.1/Docs",
       "build": True
     }
   },
-  "1.3": {
+  "Clientcide 3.0.5": {
     "Core": {
       "package": "lib/core.1.3.2/package.yml",
-      "specs": [
-        "lib/core-specs/1.3base/package.yml",
-        "lib/core-specs/1.3client/package.yml"
-      ],
-      "docs": "lib/core.1.3.2/Docs",
-      "build": True,
-      "fiddles": {
-        "path": "lib/fiddles/demos",
-        "exclude": False,
-        "package": "lib/fiddles/package.yml"
-      }
+      "build": True
     },
     "More": {
       "package": "lib/more.1.3.2.2dev/package.yml",
-      "specs": ["lib/more.1.3.2.2dev/Tests/Specs/package.yml"],
+      "build": True
+    },
+    "Clientcide": {
+      "package": "lib/clientcide.3.0.5/package.yml",
+      "docs": "lib/clientcide.3.0.5/Docs",
       "demos": {
-        "path": "lib/more.1.3.2.2dev/Tests/Interactive",
-        "exclude": False
+        "path": "lib/clientcide.3.0.5/Tests/Interactive"
       },
-      "docs": "lib/more.1.3.2.2dev/Docs",
+      "specs": ["lib/clientcide.3.0.5/Tests/Specs/package.yml"],
+      "build": True
+    },
+    "Behavior": {
+      "package": "lib/behavior/package.yml",
+      "docs": "lib/behavior/Docs",
+      "specs": ["lib/behavior/Tests/Specs/package.yml"],
+      "build": True
+    },
+    "More-Behaviors": {
+      "package": "lib/more-behaviors/package.yml",
+      "docs": "lib/more-behaviors/Docs",
+      "demos": {
+        "path": "lib/more-behaviors/Tests/Interactive"
+      },
+      "specs": ["lib/more-behaviors/Tests/Specs/package.yml"],
       "build": True
     }
   }
@@ -145,7 +152,7 @@ for name, project in PROJECTS.iteritems():
       config['DEPENDER_PACKAGE_YMLS'].append(repo['package'])
     if repo.has_key('scripts_json'):
       repo['scripts_json'] = PATH_FROM_ROOT(repo['scripts_json'])
-      config['DEPENDER_SCRIPTS_JSON'].append(repo['scripts_json'])
+      config['DEPENDER_SCRIPTS_JSON'].append((name, repo['scripts_json']))
     if repo.has_key('specs'):
       specs = []
       for spec in repo["specs"]:
