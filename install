@@ -3,16 +3,16 @@ curl -O -k https://raw.github.com/pypa/virtualenv/master/virtualenv.py;
 python virtualenv.py env;
 env/bin/easy_install crepo;
 rm virtualenv.*;
-ln -s lib/applications/go/go;
-cd lib/applications;
-../../env/bin/crepo sync;
+ln -s applications/go/go;
+cd applications;
+../env/bin/crepo sync;
 cd ../configurations;
 for f in *
 do
   echo "~~~~~~~~~~~~ Syncronizing project: $f ~~~~~~~~~~~~"
   cd $f
-  ../../../env/bin/crepo sync;
+  ../../env/bin/crepo sync;
   cd ..
 done
-cd ../..;
+cd ..;
 ./go install;

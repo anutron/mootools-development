@@ -12,57 +12,57 @@ DEFAULT_VERSION = "1.3"
 PROJECTS = {
   "1.2": {
     "Core": {
-      "package": "../../configurations/1.2/core/package.yml",
-      "docs": "../../configurations/1.2/core/Docs",
+      "package": "../configurations/1.2/core/package.yml",
+      "docs": "../configurations/1.2/core/Docs",
       "build": True
     },
     "More": {
-      "package": "../../configurations/1.2/more/package.yml",
+      "package": "../configurations/1.2/more/package.yml",
       "demos": {
-        "path": "../../configurations/1.2/more/Tests/Interactive",
+        "path": "../configurations/1.2/more/Tests/Interactive",
         "exclude": False
       },
-      "docs": "../../configurations/1.2/more/Docs",
+      "docs": "../configurations/1.2/more/Docs",
       "build": True
     }
   },
   "1.3": {
     "Core": {
-      "package": "../../configurations/1.3/core/package.yml",
+      "package": "../configurations/1.3/core/package.yml",
       "specs": [
-        "../../configurations/1.3/core-specs/1.3base/package.yml",
-        "../../configurations/1.3/core-specs/1.3client/package.yml"
+        "../configurations/1.3/core-specs/1.3base/package.yml",
+        "../configurations/1.3/core-specs/1.3client/package.yml"
       ],
-      "docs": "../../configurations/1.3/core/Docs",
+      "docs": "../configurations/1.3/core/Docs",
       "build": True,
       "fiddles": {
-        "path": "../../configurations/1.3/fiddles/demos",
+        "path": "../configurations/1.3/fiddles/demos",
         "exclude": False,
-        "package": "../../configurations/1.3/fiddles/package.yml"
+        "package": "../configurations/1.3/fiddles/package.yml"
       }
     },
     "More": {
-      "package": "../../configurations/1.3/more/package.yml",
-      "specs": ["../../configurations/1.3/more/Tests/Specs/package.yml"],
+      "package": "../configurations/1.3/more/package.yml",
+      "specs": ["../configurations/1.3/more/Tests/Specs/package.yml"],
       "demos": {
-        "path": "../../configurations/1.3/more/Tests/Interactive",
+        "path": "../configurations/1.3/more/Tests/Interactive",
         "exclude": False
       },
-      "docs": "../../configurations/1.3/more/Docs",
+      "docs": "../configurations/1.3/more/Docs",
       "build": True
     }
   }
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(DOC_ROOT, "../configurations/1.3/more/Tests/Specs/assets/jsonp.js")),
 }
 
 #############################################################################
