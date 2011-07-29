@@ -6,7 +6,7 @@ rm virtualenv.*;
 ln -s applications/go/go;
 cd applications;
 ../env/bin/crepo sync;
-cd ../configurations;
+cd ../lib;
 ../env/bin/crepo sync;
 cd ..;
 ./go install;
