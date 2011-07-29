@@ -17,6 +17,10 @@
 		"mootools-core-specs": {
 			"dir":"core-specs",
 			"track-branch": "master"
+		},
+		"mootools-demos": {
+			"dir":"fiddles",
+			"track-branch": "master"
 		}
 	}
 }
