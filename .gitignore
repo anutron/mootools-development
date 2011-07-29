@@ -1,9 +1,9 @@
 go
 env
 
-configurations/*
-!configurations/*.json
-!configurations/*.hash
+lib/*
+!lib/*.json
+!lib/*.hash
 
 applications/*
 !applications/manifest.json
