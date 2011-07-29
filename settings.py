@@ -1,6 +1,7 @@
 import logging
-from os.path import abspath, join, dirname
+from os.path import abspath, join, dirname, normpath
 DOC_ROOT = dirname(__file__)
+ROOT = abspath(join(DOC_ROOT, '../../'))
 
 TITLE_PREFIX = 'MooTools Development'
 
@@ -12,63 +13,66 @@ DEFAULT_VERSION = "1.3"
 PROJECTS = {
   "1.2": {
     "Core": {
-      "package": "../../configurations/1.2/core/package.yml",
-      "docs": "../../configurations/1.2/core/Docs",
+      "package": "lib/core.1.2.5/package.yml",
+      "docs": "lib/core.1.2.5/Docs",
       "build": True
     },
     "More": {
-      "package": "../../configurations/1.2/more/package.yml",
+      "package": "lib/more.1.2.5.1/package.yml",
       "demos": {
-        "path": "../../configurations/1.2/more/Tests/Interactive",
+        "path": "lib/more.1.2.5.1/Tests/Interactive",
         "exclude": False
       },
-      "docs": "../../configurations/1.2/more/Docs",
+      "docs": "lib/more.1.2.5.1/Docs",
       "build": True
     }
   },
   "1.3": {
     "Core": {
-      "package": "../../configurations/1.3/core/package.yml",
+      "package": "lib/core.1.3.2/package.yml",
       "specs": [
-        "../../configurations/1.3/core-specs/1.3base/package.yml",
-        "../../configurations/1.3/core-specs/1.3client/package.yml"
+        "lib/core-specs/1.3base/package.yml",
+        "lib/core-specs/1.3client/package.yml"
       ],
-      "docs": "../../configurations/1.3/core/Docs",
+      "docs": "lib/core.1.3.2/Docs",
       "build": True,
       "fiddles": {
-        "path": "../../configurations/1.3/fiddles/demos",
+        "path": "lib/fiddles/demos",
         "exclude": False,
-        "package": "../../configurations/1.3/fiddles/package.yml"
+        "package": "lib/fiddles/package.yml"
       }
     },
     "More": {
-      "package": "../../configurations/1.3/more/package.yml",
-      "specs": ["../../configurations/1.3/more/Tests/Specs/package.yml"],
+      "package": "lib/more.1.3.2.2dev/package.yml",
+      "specs": ["lib/more.1.3.2.2dev/Tests/Specs/package.yml"],
       "demos": {
-        "path": "../../configurations/1.3/more/Tests/Interactive",
+        "path": "lib/more.1.3.2.2dev/Tests/Interactive",
         "exclude": False
       },
-      "docs": "../../configurations/1.3/more/Docs",
+      "docs": "lib/more.1.3.2.2dev/Docs",
       "build": True
     }
   }
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(DOC_ROOT, "../../configurations/1.3/more/Tests/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/jsonp.js")),
 }
 
 #############################################################################
 ###                  DO NOT EDIT BELOW THIS LINE                          ###
 #############################################################################
 
+
+def PATH_FROM_ROOT(path):
+  return normpath('../../' + path)
 
 # Django settings for mootools-test-runner project.
 
@@ -132,16 +136,28 @@ for name, project in PROJECTS.iteritems():
   if project.has_key('exclude_blocks') is False:
     config['exclude_blocks'] = []
   for name, repo in project.iteritems():
+    if repo.has_key('docs'):
+      repo['docs'] = PATH_FROM_ROOT(repo['docs'])
+    if repo.has_key('demos'):
+      repo['demos']['path'] = PATH_FROM_ROOT(repo['demos']['path'])
     if repo.has_key('package'):
+      repo['package'] = PATH_FROM_ROOT(repo['package'])
       config['DEPENDER_PACKAGE_YMLS'].append(repo['package'])
     if repo.has_key('scripts_json'):
+      repo['scripts_json'] = PATH_FROM_ROOT(repo['scripts_json'])
       config['DEPENDER_SCRIPTS_JSON'].append(repo['scripts_json'])
     if repo.has_key('specs'):
+      specs = []
       for spec in repo["specs"]:
+        spec = PATH_FROM_ROOT(spec)
+        specs.append(spec)
         config['DEPENDER_PACKAGE_YMLS'].append(spec)
+      repo['specs'] = specs
     if repo.has_key('build') and repo["build"] is True:
       config['BUILDER_PACKAGES'].append(name)
     if repo.has_key('fiddles'):
+      repo['fiddles']['package'] = PATH_FROM_ROOT(repo['fiddles']['package'])
+      repo['fiddles']['path'] = PATH_FROM_ROOT(repo['fiddles']['path'])
       config['DEPENDER_PACKAGE_YMLS'].append(repo['fiddles']['package'])
 
 def GET_PATH(path):
