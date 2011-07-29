@@ -1,13 +1,9 @@
 go
 env
 
-configurations/1.2/*
-configurations/1.2/*.json
-configurations/1.2/*.hash
-
-configurations/1.3/*
-!configurations/1.3/*.json
-!configurations/1.3/*.hash
+configurations/*
+!configurations/*.json
+!configurations/*.hash
 
 applications/*
 !applications/manifest.json

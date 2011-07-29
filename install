@@ -7,12 +7,6 @@ ln -s applications/go/go;
 cd applications;
 ../env/bin/crepo sync;
 cd ../configurations;
-for f in *
-do
-  echo "~~~~~~~~~~~~ Syncronizing project: $f ~~~~~~~~~~~~"
-  cd $f
-  ../../env/bin/crepo sync;
-  cd ..
-done
+../env/bin/crepo sync;
 cd ..;
 ./go install;
