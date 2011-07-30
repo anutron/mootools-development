@@ -8,7 +8,7 @@ TITLE_PREFIX = 'MooTools Development'
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
-DEFAULT_VERSION = "Clientcide 3.0.5"
+DEFAULT_VERSION = "Clientcide 3.0.6"
 
 PROJECTS = {
   "Clientcide 2.2.1": {
@@ -26,7 +26,7 @@ PROJECTS = {
       "build": True
     }
   },
-  "Clientcide 3.0.5": {
+  "Clientcide 3.0.6": {
     "Core": {
       "package": "lib/core.1.3.2/package.yml",
       "build": True
@@ -36,12 +36,12 @@ PROJECTS = {
       "build": True
     },
     "Clientcide": {
-      "package": "lib/clientcide.3.0.5/package.yml",
-      "docs": "lib/clientcide.3.0.5/Docs",
+      "package": "lib/clientcide.3.0.6/package.yml",
+      "docs": "lib/clientcide.3.0.6/Docs",
       "demos": {
-        "path": "lib/clientcide.3.0.5/Tests/Interactive"
+        "path": "lib/clientcide.3.0.6/Tests/Interactive"
       },
-      "specs": ["lib/clientcide.3.0.5/Tests/Specs/package.yml"],
+      "specs": ["lib/clientcide.3.0.6/Tests/Specs/package.yml"],
       "build": True
     },
     "Behavior": {

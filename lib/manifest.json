@@ -36,10 +36,10 @@
 			"remote-project-name": "clientcide",
 			"track-indirect": "clientcide.2.2.1.hash"
 		},
-		"clientcide.3.0.5": {
-			"dir": "clientcide.3.0.5",
+		"clientcide.3.0.6": {
+			"dir": "clientcide.3.0.6",
 			"remote-project-name": "clientcide",
-			"track-indirect": "clientcide.3.0.5.hash"
+			"track-indirect": "clientcide.3.0.6.hash"
 		},
 		"clientcide": {
 			"dir": "clientcide",
