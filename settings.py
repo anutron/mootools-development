@@ -33,6 +33,10 @@ PROJECTS = {
     },
     "More": {
       "package": "lib/more.1.3.2.2dev/package.yml",
+      "demos": {
+        "path": "lib/more.1.3.2.2dev/Tests/Interactive",
+        "exclude": True
+      },
       "build": True
     },
     "Clientcide": {
