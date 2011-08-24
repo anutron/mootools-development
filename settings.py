@@ -3,12 +3,12 @@ from os.path import abspath, join, dirname, normpath
 DOC_ROOT = dirname(__file__)
 ROOT = abspath(join(DOC_ROOT, '../../'))
 
-TITLE_PREFIX = 'MooTools Development'
+TITLE_PREFIX = 'Clientcide Development'
 
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
-DEFAULT_VERSION = "Clientcide 3.0.6"
+DEFAULT_VERSION = "Clientcide 3.0.7"
 
 PROJECTS = {
   "Clientcide 2.2.1": {
@@ -26,7 +26,7 @@ PROJECTS = {
       "build": True
     }
   },
-  "Clientcide 3.0.6": {
+  "Clientcide 3.0.7": {
     "Core": {
       "package": "lib/core.1.3.2/package.yml",
       "build": True
@@ -40,12 +40,12 @@ PROJECTS = {
       "build": True
     },
     "Clientcide": {
-      "package": "lib/clientcide.3.0.6/package.yml",
-      "docs": "lib/clientcide.3.0.6/Docs",
+      "package": "lib/clientcide/package.yml",
+      "docs": "lib/clientcide/Docs",
       "demos": {
-        "path": "lib/clientcide.3.0.6/Tests/Interactive"
+        "path": "lib/clientcide/Tests/Interactive"
       },
-      "specs": ["lib/clientcide.3.0.6/Tests/Specs/package.yml"],
+      "specs": ["lib/clientcide/Tests/Specs/package.yml"],
       "build": True
     },
     "Behavior": {
