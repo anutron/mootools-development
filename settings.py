@@ -94,6 +94,7 @@ PROJECTS = {
         "path": "lib/mootools-bootstrap/Tests/Interactive"
       },
       "specs": ["lib/mootools-bootstrap/Tests/Specs/package.yml"],
+      "docs": "lib/mootools-bootstrap/"
     }
   }
 }
