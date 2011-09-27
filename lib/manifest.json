@@ -49,6 +49,7 @@
 		},
 
 		"mootools-bootstrap": {
+			"dir": "bootstrap",
 			"track-branch": "master"
 		},
 

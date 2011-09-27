@@ -88,13 +88,13 @@ PROJECTS = {
       "build": True
     },
     "Bootstrap": {
-      "package": "lib/mootools-bootstrap/package.yml",
+      "package": "lib/bootstrap/package.yml",
       "build": True,
       "demos": {
-        "path": "lib/mootools-bootstrap/Tests/Interactive"
+        "path": "lib/bootstrap/Tests/Interactive"
       },
-      "specs": ["lib/mootools-bootstrap/Tests/Specs/package.yml"],
-      "docs": "lib/mootools-bootstrap/"
+      "specs": ["lib/bootstrap/Tests/Specs/package.yml"],
+      "docs": "lib/bootstrap/"
     }
   }
 }
