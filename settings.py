@@ -6,7 +6,7 @@ ROOT = abspath(join(DOC_ROOT, '../../'))
 TITLE_PREFIX = 'Clientcide Development'
 
 # Set to true to re-load all JS every time. (slowish)
-DEPENDER_DEBUG = True
+DEPENDER_DEBUG = False
 
 DEFAULT_VERSION = "Clientcide 3.2.0"
 
@@ -123,7 +123,7 @@ def PATH_FROM_ROOT(path):
 
 logging.basicConfig(level=logging.INFO)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 # Local time zone for this installation. Choices can be found here:

@@ -2,14 +2,14 @@
 	"default-remote":"anutron",
 	"remotes": {
 		"anutron": {
-			"fetch": "git://github.com/anutron/%(name)s.git"
-		},
-		"mootools": {
-			"fetch": "git://github.com/mootools/%(name)s.git"
+			"fetch": "http://github.com/anutron/%(name)s.git"
 		},
 		"origin": {
 			"fetch": "git@github.com:anutron/%(name)s.git",
 			"push": "git@github.com:anutron/%(name)s.git"
+		},
+		"mootools": {
+			"fetch": "http://github.com/mootools/%(name)s.git"
 		}
 	},
 	"projects": {
@@ -17,69 +17,63 @@
 			"dir":"core.1.2.5",
 			"remote-project-name": "mootools-core",
 			"track-indirect": "core.1.2.5.hash",
-			"remotes": ["mootools", "anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 		"core.1.5": {
 			"dir":"core.1.5",
 			"remote-project-name": "mootools-core",
 			"track-indirect": "core.1.5.hash",
-			"remotes": ["mootools", "anutron", "origin"]
+			"remotes": ["anutron", "origin"]
 		},
 
 		"more.1.2.5.1": {
 			"dir":"more.1.2.5.1",
 			"remote-project-name": "mootools-more",
 			"track-indirect": "more.1.2.5.1.hash",
-			"remotes": ["mootools", "anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 		"more.1.5.0.1": {
 			"dir":"more.1.5.0.1",
 			"remote-project-name": "mootools-more",
 			"track-indirect": "more.1.5.0.1.hash",
-			"remotes": ["mootools", "anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 
 		"clientcide.2.2.1": {
 			"dir": "clientcide.2.2.1",
 			"remote-project-name": "clientcide",
 			"track-indirect": "clientcide.2.2.1.hash",
-			"remotes": ["anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 		"clientcide": {
 			"dir": "clientcide",
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 
 		"behavior": {
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 		"more-behaviors": {
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 
 		"mootools-bootstrap": {
 			"dir": "bootstrap",
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
+			"remotes": ["anutron"]
 		},
 		"mootools-demos": {
 			"dir":"fiddles",
 			"track-branch": "master",
 			"from-remote": "mootools",
-			"remotes": ["mootools", "anutron", "origin"]
-		},
-		"mootools-core-specs": {
-			"dir":"core-specs",
-			"track-branch": "master",
-			"from-remote": "mootools",
-			"remotes": ["mootools", "anutron", "origin"]
+			"remotes": ["anutron", "mootools"]
 		}
 	}
 }
