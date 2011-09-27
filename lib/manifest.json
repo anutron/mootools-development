@@ -9,12 +9,12 @@
 		}
 	},
 	"projects": {
-		"core.1.2.5": { 
+		"core.1.2.5": {
 			"dir":"core.1.2.5",
 			"remote-project-name": "mootools-core",
 			"track-indirect": "core.1.2.5.hash"
 		},
-		"core.1.3.2": { 
+		"core.1.3.2": {
 			"dir":"core.1.3.2",
 			"remote-project-name": "mootools-core",
 			"track-indirect": "core.1.3.2.hash"
@@ -47,6 +47,11 @@
 		"more-behaviors": {
 			"track-branch": "master"
 		},
+
+		"mootools-bootstrap": {
+			"track-branch": "master"
+		},
+
 
 		"mootools-demos": {
 			"dir":"fiddles",

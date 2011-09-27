@@ -10,6 +10,7 @@ DEPENDER_DEBUG = True
 
 DEFAULT_VERSION = "Clientcide 3.0.7"
 
+
 PROJECTS = {
   "Clientcide 2.2.1": {
     "clientcide": {
@@ -62,6 +63,37 @@ PROJECTS = {
       },
       "specs": ["lib/more-behaviors/Tests/Specs/package.yml"],
       "build": True
+    }
+  },
+  "MooTools Bootstrap": {
+    "Core": {
+      "package": "lib/core.1.3.2/package.yml",
+      "build": True
+    },
+    "More": {
+      "package": "lib/more.1.3.2.2dev/package.yml",
+      "build": True
+    },
+    "Clientcide": {
+      "package": "lib/clientcide/package.yml",
+      "build": True
+    },
+    "Behavior": {
+      "package": "lib/behavior/package.yml",
+      "specs": ["lib/behavior/Tests/Specs/package.yml"],
+      "build": True
+    },
+    "More-Behaviors": {
+      "package": "lib/more-behaviors/package.yml",
+      "build": True
+    },
+    "Bootstrap": {
+      "package": "lib/mootools-bootstrap/package.yml",
+      "build": True,
+      "demos": {
+        "path": "lib/mootools-bootstrap/Tests/Interactive"
+      },
+      "specs": ["lib/mootools-bootstrap/Tests/Specs/package.yml"],
     }
   }
 }
@@ -151,6 +183,8 @@ for name, project in PROJECTS.iteritems():
       repo['docs'] = PATH_FROM_ROOT(repo['docs'])
     if repo.has_key('demos'):
       repo['demos']['path'] = PATH_FROM_ROOT(repo['demos']['path'])
+      if repo['demos'].has_key('assets'):
+        repo['demos']['assets'] = PATH_FROM_ROOT(repo['demos']['assets'])
     if repo.has_key('package'):
       repo['package'] = PATH_FROM_ROOT(repo['package'])
       config['DEPENDER_PACKAGE_YMLS'].append(repo['package'])
