@@ -29,13 +29,13 @@ PROJECTS = {
   },
   "Clientcide 3.0.8": {
     "Core": {
-      "package": "lib/core.1.3.2/package.yml",
+      "package": "lib/core.1.4.1/package.yml",
       "build": True
     },
     "More": {
-      "package": "lib/more.1.3.2.2dev/package.yml",
+      "package": "lib/more.1.4.0.1/package.yml",
       "demos": {
-        "path": "lib/more.1.3.2.2dev/Tests/Interactive",
+        "path": "lib/more.1.4.0.1/Tests/Interactive",
         "exclude": True
       },
       "build": True
@@ -67,11 +67,11 @@ PROJECTS = {
   },
   "MooTools Bootstrap": {
     "Core": {
-      "package": "lib/core.1.3.2/package.yml",
+      "package": "lib/core.1.4.1/package.yml",
       "build": True
     },
     "More": {
-      "package": "lib/more.1.3.2.2dev/package.yml",
+      "package": "lib/more.1.4.0.1/package.yml",
       "build": True
     },
     "Clientcide": {
@@ -100,14 +100,14 @@ PROJECTS = {
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(ROOT, "lib/more.1.3.2.2dev/Tests/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/jsonp.js")),
 }
 
 #############################################################################
