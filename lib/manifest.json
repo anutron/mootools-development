@@ -53,19 +53,19 @@
 		},
 
 		"behavior": {
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
 		"more-behaviors": {
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
 
 		"mootools-bootstrap": {
 			"dir": "bootstrap",
-			"track-branch": "master",
+			"track-branch": "release",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
