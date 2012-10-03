@@ -38,6 +38,7 @@ PROJECTS = {
         "path": "lib/more.1.4.0.1/Tests/Interactive",
         "exclude": True
       },
+      "specs": ["lib/more.1.4.0.1/Tests/Specs/package.yml"],
       "build": True
     },
     "Clientcide": {
