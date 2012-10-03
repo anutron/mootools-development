@@ -8,7 +8,7 @@ TITLE_PREFIX = 'Clientcide Development'
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
-DEFAULT_VERSION = "Clientcide 3.0.12"
+DEFAULT_VERSION = "Clientcide 3.1.0"
 
 
 PROJECTS = {
@@ -27,7 +27,7 @@ PROJECTS = {
       "build": True
     }
   },
-  "Clientcide 3.0.12": {
+  "Clientcide 3.1.0": {
     "Core": {
       "package": "lib/core.1.4.5/package.yml",
       "build": True
