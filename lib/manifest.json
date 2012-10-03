@@ -19,10 +19,10 @@
 			"track-indirect": "core.1.2.5.hash",
 			"remotes": ["mootools", "anutron", "origin"]
 		},
-		"core.1.4.4": {
-			"dir":"core.1.4.4",
+		"core.1.4.5": {
+			"dir":"core.1.4.5",
 			"remote-project-name": "mootools-core",
-			"track-indirect": "core.1.4.4.hash",
+			"track-indirect": "core.1.4.5.hash",
 			"remotes": ["mootools", "anutron", "origin"]
 		},
 

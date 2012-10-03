@@ -29,7 +29,7 @@ PROJECTS = {
   },
   "Clientcide 3.0.12": {
     "Core": {
-      "package": "lib/core.1.4.4/package.yml",
+      "package": "lib/core.1.4.5/package.yml",
       "build": True
     },
     "More": {
@@ -68,7 +68,7 @@ PROJECTS = {
   },
   "MooTools Bootstrap": {
     "Core": {
-      "package": "lib/core.1.4.4/package.yml",
+      "package": "lib/core.1.4.5/package.yml",
       "build": True
     },
     "More": {
