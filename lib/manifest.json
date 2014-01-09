@@ -1,85 +1,27 @@
 {
-	"default-remote":"anutron",
+	"default-remote":"origin",
 	"remotes": {
-		"anutron": {
-			"fetch": "git://github.com/anutron/%(name)s.git"
-		},
 		"mootools": {
 			"fetch": "git://github.com/mootools/%(name)s.git"
 		},
 		"origin": {
-			"fetch": "git@github.com:anutron/%(name)s.git",
-			"push": "git@github.com:anutron/%(name)s.git"
+			"fetch": "git@github.com:mootools-edge/%(name)s.git",
+			"push": "git@github.com:mootools-edge/%(name)s.git"
 		}
 	},
 	"projects": {
-		"core.1.2.5": {
-			"dir":"core.1.2.5",
+		"core-edge": {
+			"dir":"core-edge",
 			"remote-project-name": "mootools-core",
-			"track-indirect": "core.1.2.5.hash",
-			"remotes": ["mootools", "anutron", "origin"]
+			"track-branch": "master",
+			"remotes": ["mootools", "origin"]
 		},
-		"core.1.4.5": {
-			"dir":"core.1.4.5",
-			"remote-project-name": "mootools-core",
-			"track-indirect": "core.1.4.5.hash",
-			"remotes": ["mootools", "anutron", "origin"]
-		},
-
-		"more.1.2.5.1": {
-			"dir":"more.1.2.5.1",
+		"more-edge": {
+			"dir":"more-edge",
 			"remote-project-name": "mootools-more",
-			"track-indirect": "more.1.2.5.1.hash",
-			"remotes": ["mootools", "anutron", "origin"]
-		},
-		"more.1.4.0.1": {
-			"dir":"more.1.4.0.1",
-			"remote-project-name": "mootools-more",
-			"track-indirect": "more.1.4.0.1.hash",
-			"remotes": ["mootools", "anutron", "origin"]
-		},
-
-		"clientcide.2.2.1": {
-			"dir": "clientcide.2.2.1",
-			"remote-project-name": "clientcide",
-			"track-indirect": "clientcide.2.2.1.hash",
-			"remotes": ["anutron", "origin"]
-		},
-		"clientcide": {
-			"dir": "clientcide",
-			"track-branch": "release",
-			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
-		},
-
-		"behavior": {
-			"track-branch": "release",
-			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
-		},
-		"more-behaviors": {
-			"track-branch": "release",
-			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
-		},
-
-		"mootools-bootstrap": {
-			"dir": "bootstrap",
-			"track-branch": "release",
-			"from-remote": "anutron",
-			"remotes": ["anutron", "origin"]
-		},
-		"mootools-demos": {
-			"dir":"fiddles",
 			"track-branch": "master",
 			"from-remote": "mootools",
-			"remotes": ["mootools", "anutron", "origin"]
-		},
-		"mootools-core-specs": {
-			"dir":"core-specs",
-			"track-branch": "master",
-			"from-remote": "mootools",
-			"remotes": ["mootools", "anutron", "origin"]
+			"remotes": ["mootools", "origin"]
 		}
 	}
 }
