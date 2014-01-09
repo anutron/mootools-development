@@ -1,12 +1,15 @@
 #!/bin/bash
-curl -O -k https://raw.github.com/pypa/virtualenv/master/virtualenv.py;
-python virtualenv.py env;
+curl -O https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.9.1.tar.gz;
+tar xvfz virtualenv-1.9.1.tar.gz;
+cd virtualenv-1.9.1;
+python virtualenv.py ../env;
+cd ..;
 env/bin/easy_install crepo;
-rm virtualenv.*;
-ln -s applications/go/go;
+rm -rf virtualenv*;
 cd applications;
 ../env/bin/crepo sync;
 cd ../lib;
 ../env/bin/crepo sync;
 cd ..;
+ln -s applications/go/go;
 ./go install;
