@@ -47,25 +47,25 @@
 		},
 		"clientcide": {
 			"dir": "clientcide",
-			"track-branch": "release",
+			"track-branch": "master",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
 
 		"behavior": {
-			"track-branch": "release",
+			"track-branch": "master",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
 		"more-behaviors": {
-			"track-branch": "release",
+			"track-branch": "master",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
 
 		"mootools-bootstrap": {
 			"dir": "bootstrap",
-			"track-branch": "release",
+			"track-branch": "master",
 			"from-remote": "anutron",
 			"remotes": ["anutron", "origin"]
 		},
