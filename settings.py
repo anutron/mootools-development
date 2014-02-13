@@ -8,7 +8,7 @@ TITLE_PREFIX = 'Clientcide Development'
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
-DEFAULT_VERSION = "Clientcide 3.1.0"
+DEFAULT_VERSION = "Clientcide 3.2.0"
 
 
 PROJECTS = {
@@ -27,18 +27,18 @@ PROJECTS = {
       "build": True
     }
   },
-  "Clientcide 3.1.0": {
+  "Clientcide 3.2.0": {
     "Core": {
-      "package": "lib/core.1.4.5/package.yml",
+      "package": "lib/core.1.5/package.yml",
       "build": True
     },
     "More": {
-      "package": "lib/more.1.4.0.1/package.yml",
+      "package": "lib/more.1.5.0.1/package.yml",
       "demos": {
-        "path": "lib/more.1.4.0.1/Tests/Interactive",
+        "path": "lib/more.1.5.0.1/Tests/Interactive",
         "exclude": True
       },
-      "specs": ["lib/more.1.4.0.1/Tests/Specs/package.yml"],
+      "specs": ["lib/more.1.5.0.1/Tests/Specs/package.yml"],
       "build": True
     },
     "Clientcide": {
@@ -68,11 +68,11 @@ PROJECTS = {
   },
   "MooTools Bootstrap": {
     "Core": {
-      "package": "lib/core.1.4.5/package.yml",
+      "package": "lib/core.1.5/package.yml",
       "build": True
     },
     "More": {
-      "package": "lib/more.1.4.0.1/package.yml",
+      "package": "lib/more.1.5.0.1/package.yml",
       "build": True
     },
     "Clientcide": {
@@ -101,14 +101,14 @@ PROJECTS = {
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(ROOT, "lib/more.1.4.0.1/Tests/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/jsonp.js")),
 }
 
 #############################################################################
