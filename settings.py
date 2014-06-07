@@ -3,76 +3,22 @@ from os.path import abspath, join, dirname, normpath
 DOC_ROOT = dirname(__file__)
 ROOT = abspath(join(DOC_ROOT, '../../'))
 
-TITLE_PREFIX = 'Clientcide Development'
+TITLE_PREFIX = 'Behavior-UI Development'
 
 # Set to true to re-load all JS every time. (slowish)
 DEPENDER_DEBUG = True
 
-DEFAULT_VERSION = "Clientcide 3.2.0"
+DEFAULT_VERSION = "Behavior-UI 0.1"
 
 
 PROJECTS = {
-  "Clientcide 2.2.1": {
-    "clientcide": {
-      "package": "lib/clientcide.2.2.1/package.yml",
-      "docs": "lib/clientcide.2.2.1/Docs",
-      "build": True
-    },
+  "Behavior-UI 0.1": {
     "Core": {
-      "package": "lib/core.1.2.5/package.yml",
+      "package": "lib/core/package.yml",
       "build": True
     },
     "More": {
-      "package": "lib/more.1.2.5.1/package.yml",
-      "build": True
-    }
-  },
-  "Clientcide 3.2.0": {
-    "Core": {
-      "package": "lib/core.1.5/package.yml",
-      "build": True
-    },
-    "More": {
-      "package": "lib/more.1.5.0.1/package.yml",
-      "demos": {
-        "path": "lib/more.1.5.0.1/Tests/Interactive",
-        "exclude": True
-      },
-      "specs": ["lib/more.1.5.0.1/Tests/Specs/package.yml"],
-      "build": True
-    },
-    "Clientcide": {
-      "package": "lib/clientcide/package.yml",
-      "docs": "lib/clientcide/Docs",
-      "demos": {
-        "path": "lib/clientcide/Tests/Interactive"
-      },
-      "specs": ["lib/clientcide/Tests/Specs/package.yml"],
-      "build": True
-    },
-    "Behavior": {
-      "package": "lib/behavior/package.yml",
-      "docs": "lib/behavior/Docs",
-      "specs": ["lib/behavior/Tests/Specs/package.yml"],
-      "build": True
-    },
-    "More-Behaviors": {
-      "package": "lib/more-behaviors/package.yml",
-      "docs": "lib/more-behaviors/Docs",
-      "demos": {
-        "path": "lib/more-behaviors/Tests/Interactive"
-      },
-      "specs": ["lib/more-behaviors/Tests/Specs/package.yml"],
-      "build": True
-    }
-  },
-  "MooTools Bootstrap": {
-    "Core": {
-      "package": "lib/core.1.5/package.yml",
-      "build": True
-    },
-    "More": {
-      "package": "lib/more.1.5.0.1/package.yml",
+      "package": "lib/more/package.yml",
       "build": True
     },
     "Clientcide": {
@@ -90,25 +36,27 @@ PROJECTS = {
     },
     "Bootstrap": {
       "package": "lib/bootstrap/package.yml",
+      "build": True
+    },
+    "Behavior-UI": {
+      "package": "lib/behavior-ui/js/package.yml",
       "build": True,
       "demos": {
-        "path": "lib/bootstrap/Tests/Interactive"
-      },
-      "specs": ["lib/bootstrap/Tests/Specs/package.yml"],
-      "docs": "lib/bootstrap/"
+        "path": "lib/behavior-ui/js/Tests/Interactive"
+      }
     }
   }
 }
 
 GENERIC_ASSETS = {
-  'Assets.js.test.js': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/Assets.js.test.js")),
-  'Assets.css.test.css': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/Assets.css.test.css")),
-  'mootools.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/mootools.png")),
-  'cow.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/cow.png")),
-  'notExisting.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/notExisting.png")),
-  'iDontExist.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/iDontExist.png")),
-  'iDontExistEither.png': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/iDontExistEither.png")),
-  'jsonp.js': abspath(join(ROOT, "lib/more.1.5.0.1/Tests/Specs/assets/jsonp.js")),
+  'Assets.js.test.js': abspath(join(ROOT, "lib/more/Tests/Specs/assets/Assets.js.test.js")),
+  'Assets.css.test.css': abspath(join(ROOT, "lib/more/Tests/Specs/assets/Assets.css.test.css")),
+  'mootools.png': abspath(join(ROOT, "lib/more/Tests/Specs/assets/mootools.png")),
+  'cow.png': abspath(join(ROOT, "lib/more/Tests/Specs/assets/cow.png")),
+  'notExisting.png': abspath(join(ROOT, "lib/more/Tests/Specs/assets/notExisting.png")),
+  'iDontExist.png': abspath(join(ROOT, "lib/more/Tests/Specs/assets/iDontExist.png")),
+  'iDontExistEither.png': abspath(join(ROOT, "lib/more/Tests/Specs/assets/iDontExistEither.png")),
+  'jsonp.js': abspath(join(ROOT, "lib/more/Tests/Specs/assets/jsonp.js")),
 }
 
 #############################################################################
